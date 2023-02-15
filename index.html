@@ -65,9 +65,18 @@
       <section class="title">
         <div class="title-content container">
           <h1>EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-          <button class="button-title" type="BUTTON">
+          <!--MODAL js-->
+          <button class="button-title" type="BUTTON" data-modal-open>
             Request our service
           </button>
+          <div class="modal is-hidden" data-modal>
+            <button class="modal-close" data-modal-close>
+              <svg class="modal-close-icon">
+                <use href="./images/icons.svg#icon-close-x"></use>
+              </svg>
+            </button>
+          </div>
+          <script src="./js/modal.js"></script>
         </div>
       </section>
       <div class="middle section container">
