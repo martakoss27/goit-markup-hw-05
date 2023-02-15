@@ -210,21 +210,30 @@ h1 {
   color: var(--text-color-white);
 }
 .modal {
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000033;
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateX(50%) translateY(-50%) scale(0);
+}
+.modal-content {
+  position: relative;
   width: 528px;
   height: 581px;
   background-color: var(--main-backroung-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition-property: visibility, transform;
-  visibility: visible;
-  transform: translateX(50%) translateY(-50%) scale(1);
-}
-.is-hidden {
-  pointer-events: none;
-  visibility: hidden;
-  transform: translateX(50%) translateY(-50%) scale(0);
 }
 .modal-close {
   position: absolute;
