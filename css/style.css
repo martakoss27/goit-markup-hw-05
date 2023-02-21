@@ -27,6 +27,9 @@ body {
 }
 a {
   color: var(--main-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:link {
   text-decoration: none;
@@ -204,6 +207,10 @@ h1 {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: var(--cursor);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-title:hover {
   background: #188ce8;
@@ -220,11 +227,15 @@ h1 {
   justify-content: center;
   align-items: center;
   background: #00000033;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   pointer-events: none;
   visibility: hidden;
-  transform: translateX(50%) translateY(-50%) scale(0);
+  opacity: 1;
 }
 .modal-content {
   position: relative;
@@ -407,6 +418,9 @@ h1 {
 .team-social-media-item {
   width: 44px;
   height: 44px;
+  transition-property: background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-media-item:hover {
   background-color: var(--additional-color);
@@ -416,6 +430,9 @@ h1 {
   width: 44px;
   height: 44px;
   padding: 11px;
+  transition-property: --color1, stroke;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icon:hover {
   --color1: var(--text-color-white);
@@ -452,6 +469,10 @@ h1 {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-property: border, border-radius, --color1, --color2;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .regular-customers-item:hover {
   border: 1px solid var(--additional-color);
@@ -492,6 +513,10 @@ h1 {
   background: var(--main-backroung-color);
   border-radius: 4px;
   cursor: pointer;
+
+  transition-property: background-color, box-shadow, border-radius, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover {
   background: var(--additional-color);
@@ -499,14 +524,7 @@ h1 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
   color: var(--text-color-white);
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 .projects {
   padding-top: 34px;
@@ -519,10 +537,50 @@ h1 {
   flex-basis: calc(100%-2 * 20px) / 3;
   background: var(--main-backroung-color);
   border: 1px solid #eeeeee;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-box:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: var(--cursor);
+}
+.project-box:hover .overlay {
+  transform: translateX(0%);
+}
+.up {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 370px;
+  height: 294px;
+  background: #2196f3e6;
+  transform: translateY(+100%);
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-content {
+  width: 322px;
+  height: 140px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
 }
 .row-title {
   margin-top: 20px;
@@ -637,6 +695,9 @@ footer {
 
   background-color: #ffffff1a;
   border-radius: 50%;
+  transition-property: background-color, --color1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-2-item:hover {
   background-color: var(--additional-color);
