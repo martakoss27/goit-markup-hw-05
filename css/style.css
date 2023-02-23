@@ -80,12 +80,13 @@ button:hover {
 .header-nav-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 80px;
   padding: 0;
   list-style-type: none;
 }
 .header-nav-item {
   text-decoration: none;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -94,7 +95,16 @@ button:hover {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
+/* actually nothing yet
+.header-nav-item:hover::after {
+  content: "";
+  width: 48px;
+  height: 4px;
 
+  background: var(--additional-color);
+  border-radius: 2px;
+}
+*/
 .header-item-3 {
   width: 30%;
 }
