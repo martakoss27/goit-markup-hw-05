@@ -83,7 +83,7 @@ button:hover {
   padding: 0;
   list-style-type: none;
 }
-.header-nav-studio {
+.header-nav-item {
   text-decoration: none;
 
   font-family: "Roboto";
@@ -94,27 +94,7 @@ button:hover {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
-.header-nav-portfolio {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
 
-  color: var(--main-text-color);
-}
-
-.header-nav-contacts {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-
-  color: var(--main-text-color);
-}
 .header-item-3 {
   width: 30%;
 }
@@ -130,9 +110,12 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   width: fit-content;
+  transition-property: --color4;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contact-list-item:hover {
-  stroke: var(--additional-color);
+  --color4: var(--additional-color);
   cursor: var(--cursor);
 }
 .header-contact-list-icon {
@@ -343,6 +326,27 @@ h1 {
   padding: 0;
   margin: 50px 0px 0px 0px;
   list-style: none;
+}
+.label {
+  display: block;
+  width: 370px;
+  height: 70px;
+  margin: 0;
+  padding-top: 27px;
+  position: relative;
+  bottom: 74px;
+
+  background: #2f303acc;
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--text-color-white);
 }
 /*our-team*/
 .our-team {
