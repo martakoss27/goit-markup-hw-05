@@ -85,7 +85,32 @@ button:hover {
   padding: 0;
   list-style-type: none;
 }
+.header-nav-item-1 {
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  transition: ;
+}
+
+.header-nav-item-1:hover::after {
+  display: block;
+  position: absolute;
+  content: "";
+  margin-top: 29px;
+  width: 48px;
+  height: 4px;
+
+  background: var(--additional-color);
+  border-radius: 2px;
+}
 .header-nav-item {
+  position: relative;
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
@@ -95,16 +120,18 @@ button:hover {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
-/* actually nothing yet
 .header-nav-item:hover::after {
+  display: block;
+  position: absolute;
   content: "";
-  width: 48px;
+  margin-top: 29px;
+  width: 63px;
   height: 4px;
 
   background: var(--additional-color);
   border-radius: 2px;
 }
-*/
+
 .header-item-3 {
   width: 30%;
 }
